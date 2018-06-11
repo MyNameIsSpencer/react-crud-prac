@@ -6,7 +6,7 @@ class App extends Component {
   removeTodo(index) {
     let todos = this.state.todos;
 
-    let todo = todos.find(function(todo) {
+    let todo = todos.findIndex(function(todo) {
       return todo.counter === index
     });
 
@@ -70,10 +70,6 @@ class App extends Component {
             </li>))}
         </ul>
 
-
-        <pre>
-          {JSON.stringify(todos)}
-        </pre>
       </div>
     );
   }
